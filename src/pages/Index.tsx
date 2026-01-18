@@ -15,7 +15,7 @@ const Index = () => {
     setVariant(chosen);
   }, []);
 
-  const baseUrl = "https://trkfy.org/aff_c?offer_id=3630&aff_id=134431";
+  const baseUrl = "https://trkfy.org/aff_c?offer_id=127&aff_id=150406";
 
   const getSourceParam = (v: ProofVariant) => {
     if (v === "email") return "email";

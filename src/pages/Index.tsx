@@ -31,7 +31,7 @@ const Index = () => {
   const faqs = [
   {
     q: "How long does it take?",
-    a: "Most people finish in about 2-3 mins per deal",
+    a: "2-3 mins per deal on average",
   },
   {
     q: "What are ‘deals’?",
@@ -54,12 +54,11 @@ const Index = () => {
 function FAQSection() {
   return (
     <section className="mt-10 rounded-2xl bg-white/5 border border-white/10 p-5 md:p-7">
-      <h2 className="text-xl md:text-2xl font-bold text-white">
-        Common Questions
-      </h2>
-      <p className="mt-2 text-sm text-white/70">
-        Just keeping it real — here’s what everyone asks.
-      </p>
+      <h2 className="text-xl md:text-2xl font-bold text-pink-400 text-center">
+  Common Questions
+</h2>
+
+      
 
       <div className="mt-5 space-y-3">
         {faqs.map((item, i) => (

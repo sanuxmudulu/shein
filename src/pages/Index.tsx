@@ -166,7 +166,7 @@ const Index = () => {
               Receive Your Voucher By Email
             </h2>
             <p className="text-center text-sm mb-4 text-gray-300">
-              Perfect to buy stuffs this Christmas! 🎄
+              Perfect to refill your wardrobe! 🎄
             </p>
           </>
         )}
@@ -174,10 +174,10 @@ const Index = () => {
         {variant === "cart" && (
           <>
             <h2 className="text-2xl font-bold text-center mb-2 text-pink-400">
-              Cover Your Christmas Shopping and More
+              Your Saving Hack for 2026!
             </h2>
             <p className="text-center text-sm mb-4 text-gray-300">
-              Hot offer not to be missed this Christmas. 🎁
+              Hot offer not to be missed! 🎁
             </p>
           </>
         )}
@@ -294,6 +294,62 @@ const Index = () => {
         </div>
       </div>
 
+      const faqs = [
+  {
+    q: "How long does it take?",
+    a: "Most people finish in about 2-3 mins per deal",
+  },
+  {
+    q: "What are ‘deals’?",
+    a: "Simple tasks like app downloads, surveys, or trial",
+  },
+  {
+    q: "Do I have to pay anything?",
+    a: "Some deals are totally free, and some may include a trial/subscription",
+  },
+  {
+    q: "Why do I need to enter my email?",
+    a: "So your reward + updates can be sent to you",
+  },
+  {
+    q: "When do I get the SHEIN gift card?",
+    a: "After you finish the recommended deals, you’ll receive the gift card in email",
+  }
+];
+
+function FAQSection() {
+  return (
+    <section className="mt-10 rounded-2xl bg-white/5 border border-white/10 p-5 md:p-7">
+      <h2 className="text-xl md:text-2xl font-bold text-white">
+        Common Questions
+      </h2>
+      <p className="mt-2 text-sm text-white/70">
+        Just keeping it real — here’s what everyone asks.
+      </p>
+
+      <div className="mt-5 space-y-3">
+        {faqs.map((item, i) => (
+          <details
+            key={i}
+            className="group rounded-xl bg-black/25 border border-white/10 px-4 py-3"
+          >
+            <summary className="cursor-pointer list-none text-white font-semibold flex items-center justify-between">
+              <span>{item.q}</span>
+              <span className="text-white/60 group-open:rotate-45 transition-transform">
+                +
+              </span>
+            </summary>
+            <p className="mt-2 text-sm text-white/75 leading-relaxed">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+      
       {/* Footer note */}
       <p className="text-xs text-gray-500 max-w-2xl mx-auto text-center mt-4 leading-tight">
         This is a promotional experience and is not affiliated with or endorsed

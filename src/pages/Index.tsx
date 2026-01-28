@@ -170,7 +170,7 @@ function FAQSection() {
             </div>
             <div>
               <h3 className="font-semibold text-white mb-1">
-                Complete Recommended Deals
+                Complete Recommended Deals (4-6)
               </h3>
               <p className="text-sm text-gray-400">
                 (Higher value deals = faster rewards!)

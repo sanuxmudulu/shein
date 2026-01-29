@@ -173,7 +173,7 @@ function FAQSection() {
                 Complete 4-6 Deals
               </h3>
               <p className="text-sm text-gray-400">
-                (Higher value deals = faster rewards!)
+                Simple tasks: app downloads, surveys, or trial
               </p>
             </div>
           </div>

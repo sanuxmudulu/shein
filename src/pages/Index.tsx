@@ -173,7 +173,7 @@ function FAQSection() {
                 Complete 4-6 Deals
               </h3>
               <p className="text-sm text-gray-400">
-                Simple tasks: app downloads, surveys, or trial
+                Simple tasks: app downloads and surveys
               </p>
             </div>
           </div>

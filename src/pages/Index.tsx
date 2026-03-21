@@ -143,7 +143,7 @@ const Index = () => {
 
         <div className="w-full px-4">
           <div className="hidden md:flex md:justify-center md:gap-6">
-            {["proof1", "proof2", "proof3"].map((img, i) => (
+            {["proof neo", "proof iphone", "proof neo"].map((img, i) => (
               <div key={i} className="w-80">
                 <img
                   src={`/images/${img}.jpeg`}
@@ -155,7 +155,7 @@ const Index = () => {
 
           <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
             <div className="flex gap-4 px-2">
-              {["proof1", "proof2", "proof3"].map((img, i) => (
+              {["proof neo", "proof iphone", "proof neo"].map((img, i) => (
                 <div key={i} className="flex-shrink-0 w-72 snap-center">
                   <img
                     src={`/images/${img}.jpeg`}

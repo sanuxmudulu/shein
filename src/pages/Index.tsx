@@ -2,7 +2,7 @@ import { Users, Star } from "lucide-react";
 import "../index.css";
 
 const Index = () => {
-  const baseUrl = "https://trkfy.org/aff_c?offer_id=127&aff_id=150406";
+  const baseUrl = "https://linkthem.net/aff_c?offer_id=4136&aff_id=150406";
 
   const handleClaimClick = () => {
     window.location.href = `${baseUrl}&source=dm`;

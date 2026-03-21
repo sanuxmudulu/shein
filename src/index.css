@@ -2,51 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
 @layer base {
   :root {
-    --background: 220 15% 8%;
-    --foreground: 0 0% 98%;
-    --card: 220 15% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 15% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 78% 55%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 220 15% 16%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 220 15% 16%;
-    --muted-foreground: 220 10% 65%;
-    --accent: 45 86% 58%;
-    --accent-foreground: 220 15% 8%;
-    --destructive: 0 84.2% 60.2%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 12%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 8%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 20%;
-    --input: 220 15% 16%;
-    --ring: 0 78% 55%;
+    --border: 0 0% 88%;
+    --input: 0 0% 96%;
+    --ring: 48 100% 50%;
     --radius: 0.75rem;
-    /* Custom Lululemon design tokens */
-    --lulu-red: 0 78% 55%;
-    --lulu-red-glow: 0 78% 55%;
-    --gold-accent: 45 86% 58%;
-    --charcoal: 220 15% 8%;
-    --charcoal-light: 220 15% 12%;
-    --charcoal-lighter: 220 15% 16%;
-    
-    /* Gradients */
-    --gradient-radial: radial-gradient(circle at center, hsl(220 15% 12%) 0%, hsl(220 15% 6%) 100%);
-    --gradient-glow: 0 0 40px hsl(var(--lulu-red) / 0.3);
-    --gradient-card-glow: 0 0 20px hsl(var(--lulu-red) / 0.1);
-    
-    /* Shadows */
-    --shadow-glow: 0 0 30px hsl(var(--lulu-red) / 0.4);
-    --shadow-card: 0 8px 32px hsl(220 15% 4% / 0.8);
-    --shadow-button: 0 4px 20px hsl(var(--lulu-red) / 0.3);
-    
-    /* Animations */
+
+    --jb-yellow: 48 100% 50%;
+    --jb-yellow-dark: 45 100% 45%;
+    --jb-yellow-soft: 48 100% 92%;
+    --jb-black: 0 0% 8%;
+    --jb-gray: 0 0% 96%;
+    --jb-gray-dark: 0 0% 40%;
+
+    --shadow-glow: 0 0 30px hsl(var(--jb-yellow) / 0.25);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.08);
+    --shadow-button: 0 4px 20px hsl(var(--jb-yellow) / 0.35);
+
     --transition-glow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -56,26 +47,27 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 8%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 48 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -91,18 +83,24 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
+
+  html, body, #root {
+    min-height: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 }
 
-/* Custom animations for the new landing page design */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--lulu-red) / 0.3);
+    box-shadow: 0 0 18px hsl(var(--jb-yellow) / 0.25);
   }
   50% {
-    box-shadow: 0 0 30px hsl(var(--lulu-red) / 0.6);
+    box-shadow: 0 0 28px hsl(var(--jb-yellow) / 0.45);
   }
 }
 
@@ -111,7 +109,7 @@ All colors MUST be HSL.
     transform: scale(1);
   }
   50% {
-    transform: scale(1.04);
+    transform: scale(1.035);
   }
 }
 
@@ -130,23 +128,23 @@ All colors MUST be HSL.
     transform: scale(1) rotate(0deg);
   }
   25% {
-    opacity: 0.8;
-    transform: scale(1.1) rotate(90deg);
+    opacity: 0.85;
+    transform: scale(1.08) rotate(90deg);
   }
   50% {
-    opacity: 0.9;
-    transform: scale(1.3) rotate(180deg);
+    opacity: 0.95;
+    transform: scale(1.2) rotate(180deg);
   }
   75% {
-    opacity: 0.7;
-    transform: scale(1.1) rotate(270deg);
+    opacity: 0.8;
+    transform: scale(1.08) rotate(270deg);
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -154,16 +152,6 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes bounce-subtle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-}
-
-/* Enhanced button animations */
 .shein-cta-button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: pulse-glow 3s infinite;
@@ -178,73 +166,71 @@ All colors MUST be HSL.
 }
 
 .cta-glow-pink {
-  box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
+  box-shadow: 0 0 22px hsl(var(--jb-yellow) / 0.28);
 }
 
 .shein-cta-button:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px hsl(var(--lulu-red) / 0.4);
+  box-shadow: 0 10px 25px hsl(var(--jb-yellow) / 0.35);
   animation: cta-pump 1s ease-in-out infinite, pulse-glow 3s infinite;
 }
 
 .shein-cta-button:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
   transition: transform 0.1s;
 }
 
-/* Sparkle animation for Halloween variant */
+.shein-cta-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--jb-yellow) / 0.9);
+}
+
 .sparkle-animation {
   animation: sparkle 2s infinite;
 }
 
-/* Smooth fade in for entire page */
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Custom gradients using your existing color system */
 .halloween-gradient {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf2 35%, #ffffff 100%);
 }
 
 .reviewer-gradient {
-  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 50%, #f9fafb 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 50%, #ffffff 100%);
 }
 
 .reviewer-gradient-pink {
-  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 30%, #fcf4ff 70%, #fdf2f8 100%);
+  background: linear-gradient(135deg, #fffef7 0%, #fff9db 35%, #fffef7 100%);
 }
 
-/* Step card hover effects */
 .step-card {
   transition: all 0.3s ease;
 }
 
 .step-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .step-card.halloween:hover {
-  box-shadow: 0 8px 25px hsl(var(--lulu-red) / 0.2);
+  box-shadow: 0 12px 30px hsl(var(--jb-yellow) / 0.18);
 }
 
-/* Number circle pulse effect */
 .step-number {
   transition: all 0.3s ease;
 }
 
 .step-number:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px hsl(var(--lulu-red) / 0.4);
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px hsl(var(--jb-yellow) / 0.35);
 }
 
-/* Text glow effect for Halloween using your color system */
 .halloween-text-glow {
-  text-shadow: 0 0 10px hsl(var(--lulu-red) / 0.5);
+  text-shadow: 0 0 8px hsl(var(--jb-yellow) / 0.2);
 }
 
-/* Loading spinner if needed */
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -255,46 +241,37 @@ All colors MUST be HSL.
   animation: spin 1s linear infinite;
 }
 
-/* Focus states for accessibility */
-.shein-cta-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px hsl(var(--lulu-red));
-}
-
-/* Custom scrollbar for better UX */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f3f3f3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--lulu-red));
+  background: hsl(var(--jb-yellow-dark));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--lulu-red) / 0.8);
+  background: hsl(var(--jb-yellow));
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   .shein-cta-button {
     padding: 12px 20px;
   }
-  
+
   .step-card {
     padding: 16px;
   }
-  
+
   .fade-in-up {
     animation-duration: 0.4s;
   }
 }
 
-/* Infinite carousel for proof images */
 .infinite-carousel {
   scroll-behavior: smooth;
 }
@@ -303,28 +280,25 @@ All colors MUST be HSL.
   display: none;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 640px) {
   .infinite-carousel .flex > div {
     width: 240px;
   }
 }
 
-/* Additional utility classes for consistency */
 .text-shadow-glow {
-  text-shadow: 0 0 10px hsl(var(--lulu-red) / 0.3);
+  text-shadow: 0 0 10px hsl(var(--jb-yellow) / 0.25);
 }
 
 .bg-glow {
-  box-shadow: 0 0 20px hsl(var(--lulu-red) / 0.2);
+  box-shadow: 0 0 20px hsl(var(--jb-yellow) / 0.18);
 }
 
 .border-glow {
-  border: 1px solid hsl(var(--lulu-red) / 0.3);
-  box-shadow: 0 0 10px hsl(var(--lulu-red) / 0.1);
+  border: 1px solid hsl(var(--jb-yellow) / 0.35);
+  box-shadow: 0 0 10px hsl(var(--jb-yellow) / 0.12);
 }
 
-/* Hide scrollbar for proof images carousel */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

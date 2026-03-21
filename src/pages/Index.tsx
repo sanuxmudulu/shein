@@ -76,22 +76,6 @@ const Index = () => {
         Get Your $750 JB HiFi Credit
       </h1>
 
-      <p className="text-center mb-6 text-gray-600">
-        Complete a few quick tasks to unlock your reward
-      </p>
-
-      <button
-        onClick={handleClaimClick}
-        className="w-full max-w-md bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 px-4 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-2 shadow-lg"
-      >
-        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-          <span className="text-yellow-500 font-bold text-xs">$</span>
-        </div>
-        <div className="text-left">
-          <div className="font-bold text-sm">$750 JB HiFi Gift Card</div>
-          <div className="text-xs opacity-90">(Enter Email & Complete Deals)</div>
-        </div>
-      </button>
 
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
   <div className="space-y-6">
@@ -103,7 +87,7 @@ const Index = () => {
         <div>
           <h3 className="font-semibold text-black mb-1">
             {[
-              "Click The Button Above 👆",
+              "Click The Button Below",
               "Enter Your Email & Basic Info",
               "Complete 3-5 Deals",
               "Claim Your Gift Card"
@@ -122,6 +106,19 @@ const Index = () => {
     ))}
   </div>
 </div>
+
+      <button
+        onClick={handleClaimClick}
+        className="w-full max-w-md bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 px-4 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-2 shadow-lg"
+      >
+        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+          <span className="text-yellow-500 font-bold text-xs">$</span>
+        </div>
+        <div className="text-left">
+          <div className="font-bold text-sm">$750 JB HiFi Gift Card</div>
+          <div className="text-xs opacity-90">(Enter Email & Complete Deals)</div>
+        </div>
+      </button>
 
       <div className="w-full max-w-lg mb-6">
         <h2 className="text-2xl font-bold text-center mb-2 text-black">

@@ -33,8 +33,8 @@ const Index = () => {
 
   function FAQSection() {
     return (
-      <section className="mt-10 rounded-2xl bg-white/5 border border-white/10 p-5 md:p-7">
-        <h2 className="text-xl md:text-2xl font-bold text-yellow-500 text-center">
+      <section className="mt-10 rounded-2xl bg-white border border-gray-200 p-5 md:p-7 shadow-sm">
+        <h2 className="text-2xl md:text-3xl font-bold text-black text-center">
           Common Questions
         </h2>
 
@@ -42,7 +42,7 @@ const Index = () => {
           {faqs.map((item, i) => (
             <details
               key={i}
-              className="group rounded-xl bg-black/25 border border-white/10 px-4 py-3"
+              className="group rounded-xl bg-black/80 border border-black/20 px-4 py-3"
             >
               <summary className="cursor-pointer list-none text-white font-semibold flex items-center justify-between">
                 <span>{item.q}</span>
@@ -72,11 +72,11 @@ const Index = () => {
         </div>
       </div>
 
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-3 text-yellow-500 halloween-text-glow">
+      <h1 className="text-2xl md:text-3xl font-bold text-center mb-3 text-black">
         Get Your $750 JB HiFi Credit
       </h1>
 
-      <p className="text-center mb-6 text-gray-300">
+      <p className="text-center mb-6 text-gray-600">
         Complete a few quick tasks to unlock your reward
       </p>
 
@@ -95,7 +95,7 @@ const Index = () => {
 
       <div className="w-full max-w-lg bg-gray-900 rounded-2xl p-6 shadow-lg step-card halloween mb-6">
         <div className="space-y-6">
-          {[1,2,3,4].map((step, i) => (
+          {[1, 2, 3, 4].map((step, i) => (
             <div key={i} className="flex items-start gap-4">
               <div className="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
                 {step}
@@ -128,16 +128,16 @@ const Index = () => {
       </div>
 
       <div className="w-full max-w-lg mb-6">
-        <h2 className="text-2xl font-bold text-center mb-2 text-yellow-500">
+        <h2 className="text-2xl font-bold text-center mb-2 text-black">
           Top Claims Of The Week
         </h2>
 
-        <p className="text-center text-sm mb-4 text-gray-300">
+        <p className="text-center text-sm mb-4 text-gray-600">
           Real results from real people
         </p>
 
         <div className="flex items-center justify-center mb-4">
-          <div className="flex items-center gap-2 text-xs text-gray-400">
+          <div className="flex items-center gap-2 text-xs text-gray-500">
             <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
             <span>Swipe to see more</span>
           </div>
@@ -145,25 +145,31 @@ const Index = () => {
 
         <div className="w-full px-4">
           <div className="hidden md:flex md:justify-center md:gap-6">
-            {["proof1","proof2","proof3"].map((img,i)=>(
+            {["proof1", "proof2", "proof3"].map((img, i) => (
               <div key={i} className="w-80">
-                <img src={`/images/${img}.jpeg`} className="w-full max-h-96 object-contain rounded-lg shadow-md"/>
+                <img
+                  src={`/images/${img}.jpeg`}
+                  className="w-full max-h-96 object-contain rounded-lg shadow-md"
+                />
               </div>
             ))}
           </div>
 
           <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
             <div className="flex gap-4 px-2">
-              {["proof1","proof2","proof3"].map((img,i)=>(
+              {["proof1", "proof2", "proof3"].map((img, i) => (
                 <div key={i} className="flex-shrink-0 w-72 snap-center">
-                  <img src={`/images/${img}.jpeg`} className="w-full max-h-[500px] object-contain rounded-lg shadow-md"/>
+                  <img
+                    src={`/images/${img}.jpeg`}
+                    className="w-full max-h-[500px] object-contain rounded-lg shadow-md"
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-4 md:gap-6 text-sm mt-6 text-gray-400">
+        <div className="flex items-center justify-center gap-4 md:gap-6 text-sm mt-6 text-gray-500">
           <div className="flex items-center gap-2">
             <Users size={14} className="text-yellow-500" />
             <span>25,000+ Claims Completed</span>

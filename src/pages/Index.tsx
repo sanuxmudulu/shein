@@ -120,7 +120,7 @@ const Index = () => {
       $750 JB HiFi Gift Card
     </div>
     <div className="text-sm opacity-90">
-      Tap to Get Started
+      (Enter email and complete deals)
     </div>
   </div>
 </button>

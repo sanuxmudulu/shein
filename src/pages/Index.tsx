@@ -93,39 +93,35 @@ const Index = () => {
         </div>
       </button>
 
-      <div className="w-full max-w-lg bg-gray-900 rounded-2xl p-6 shadow-lg step-card halloween mb-6">
-        <div className="space-y-6">
-          {[1, 2, 3, 4].map((step, i) => (
-            <div key={i} className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
-                {step}
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">
-                  {[
-                    "Click The Button Above 👆",
-                    "Enter Your Email & Basic Info",
-                    "Complete 3-5 Deals",
-                    "Claim Your Gift Card"
-                  ][i]}
-                </h3>
-                <p className="text-sm text-gray-400">
-                  {[
-                    "Start your JB HiFi reward claim",
-                    "This is needed to send your reward",
-                    "Simple tasks like app downloads, and surveys",
-                    "Your JB HiFi reward will be sent by email"
-                  ][i]}
-                </p>
-              </div>
-            </div>
-          ))}
+      <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
+  <div className="space-y-6">
+    {[1, 2, 3, 4].map((step, i) => (
+      <div key={i} className="flex items-start gap-4">
+        <div className="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
+          {step}
         </div>
-
-        <p className="text-xs text-gray-500 text-center mt-6">
-          * Terms and conditions apply. Gift card values may vary based on completed offers.
-        </p>
+        <div>
+          <h3 className="font-semibold text-black mb-1">
+            {[
+              "Click The Button Above 👆",
+              "Enter Your Email & Basic Info",
+              "Complete 3-5 Deals",
+              "Claim Your Gift Card"
+            ][i]}
+          </h3>
+          <p className="text-sm text-gray-600">
+            {[
+              "Start your JB HiFi reward claim",
+              "This is needed to send your reward",
+              "Simple tasks like app downloads, and surveys",
+              "Your JB HiFi reward will be sent by email"
+            ][i]}
+          </p>
+        </div>
       </div>
+    ))}
+  </div>
+</div>
 
       <div className="w-full max-w-lg mb-6">
         <h2 className="text-2xl font-bold text-center mb-2 text-black">

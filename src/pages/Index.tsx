@@ -18,12 +18,12 @@ const Index = () => {
       a: "Simple tasks like app downloads, surveys, or trials",
     },
     {
-      q: "Do I have to pay anything?",
-      a: "Some deals are totally free, and some may include a trial or subscription",
+      q: "Is this really free?",
+      a: "Yes. The deals are free and come from our sponsors who promote their apps and services. You are rewarded for participating.",
     },
     {
       q: "Why do I need to enter my email?",
-      a: "So your reward and updates can be sent to you",
+      a: "Your email is used to track your progress and send your JB Hifi gift card",
     },
     {
       q: "When do I get the JB HiFi gift card?",
@@ -148,7 +148,7 @@ const Index = () => {
                 Complete 3-5 Deals
               </h3>
               <p className="text-sm text-gray-400">
-                Simple tasks like app downloads, surveys, and trials
+                Simple tasks like app downloads, and surveys
               </p>
             </div>
           </div>
@@ -260,11 +260,7 @@ const Index = () => {
 
       <FAQSection />
 
-      {/* Footer note */}
-      <p className="text-xs text-gray-500 max-w-2xl mx-auto text-center mt-4 leading-tight">
-        This is a promotional experience and is not affiliated with or endorsed by JB HiFi.
-        By proceeding, you agree to receive relevant communications about this reward.
-      </p>
+    
     </div>
   );
 };

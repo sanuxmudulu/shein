@@ -108,17 +108,22 @@ const Index = () => {
 </div>
 
       <button
-        onClick={handleClaimClick}
-        className="w-full max-w-md bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 px-4 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-2 shadow-lg"
-      >
-        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-          <span className="text-yellow-500 font-bold text-xs">$</span>
-        </div>
-        <div className="text-left">
-          <div className="font-bold text-sm">$750 JB HiFi Gift Card</div>
-          <div className="text-xs opacity-90">(Enter Email & Complete Deals)</div>
-        </div>
-      </button>
+  onClick={handleClaimClick}
+  className="w-full max-w-md bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-5 px-6 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
+>
+  <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+    <span className="text-yellow-500 font-bold text-sm">$</span>
+  </div>
+
+  <div className="text-left">
+    <div className="font-bold text-base md:text-lg">
+      $750 JB HiFi Gift Card
+    </div>
+    <div className="text-sm opacity-90">
+      Tap to Get Started
+    </div>
+  </div>
+</button>
 
       <div className="w-full max-w-lg mb-6">
         <h2 className="text-2xl font-bold text-center mb-2 text-black">

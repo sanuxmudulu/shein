@@ -55,7 +55,7 @@ const Index = () => {
     <div className="min-h-screen halloween-gradient flex flex-col items-center justify-center px-4 py-4 fade-in-up">
       <div className="mb-4">
         <img
-          src="/images/jbhifi-logo.png"
+          src="/images/jb logo.jpg"
           alt="JB Hi-Fi"
           className="h-14 md:h-16 object-contain"
         />

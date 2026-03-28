@@ -71,7 +71,7 @@ const Index = () => {
         <div className="space-y-6">
           {[1, 2, 3].map((step, i) => (
             <div key={i} className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
+              <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
                 {step}
               </div>
               <div>
@@ -97,11 +97,8 @@ const Index = () => {
 
       <button
         onClick={handleClaimClick}
-        className="w-full max-w-md bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-5 px-6 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
+        className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
       >
-        <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center">
-          <span className="text-yellow-500 font-bold text-sm">$</span>
-        </div>
 
         <div className="text-left">
           <div className="font-bold text-base md:text-lg">Start Now</div>

@@ -64,7 +64,7 @@ const Index = () => {
   
 
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
-        Complete the steps to claim your $750 JB HiFi discount code
+        Complete the steps below to claim your $750 JB HiFi Credit
       </h1>
 
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">

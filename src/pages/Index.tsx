@@ -78,7 +78,7 @@ const Index = () => {
                 <h3 className="font-semibold text-black mb-1">
                   {[
                     "Provide a valid email address",
-                    "Complete 4-5 required deals",
+                    "Complete at least 5-6 deals",
                     "Claim your discount code",
                   ][i]}
                 </h3>

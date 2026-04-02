@@ -79,7 +79,7 @@ const Index = () => {
                   {[
                     "Provide a valid email address",
                     "Complete at least 3-4 deals",
-                    "Claim your discount code",
+                    "Claim your discount coupon",
                   ][i]}
                 </h3>
                 <p className="text-sm text-gray-600">

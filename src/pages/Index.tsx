@@ -79,7 +79,7 @@ const Index = () => {
                   {[
                     "Sign up with email",
                     "Complete 3-4 deals",
-                    "Claim your gift card",
+                    "Claim your $750 gift card",
                   ][i]}
                 </h3>
                 <p className="text-sm text-gray-600">

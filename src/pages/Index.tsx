@@ -10,7 +10,7 @@ const Index = () => {
   const faqs = [
     {
       q: "How long do the deals take?",
-      a: "Quick 5-7 minutes for 5 deals",
+      a: "Quick 5-7 minutes for 4 deals",
     },
     {
       q: "Is this really free?",
@@ -64,7 +64,7 @@ const Index = () => {
   
 
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
-        Complete the steps below to claim your $750 JB HiFi Coupon
+        $750 JB Hifi Easter Gift Card
       </h1>
 
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
@@ -77,16 +77,16 @@ const Index = () => {
               <div>
                 <h3 className="font-semibold text-black mb-1">
                   {[
-                    "Provide a valid email address",
-                    "Complete at least 3-4 deals",
-                    "Claim your discount coupon",
+                    "Sign up with email",
+                    "Complete 3-4 deals",
+                    "Claim your gift card",
                   ][i]}
                 </h3>
                 <p className="text-sm text-gray-600">
                   {[
-                    "Discount code is emailed here",
+                    "Gift card is emailed here",
                     "Tasks like app downloads and surveys",
-                    "Upon completion of required deals",
+                    "Enjoy your shopping!",
                   ][i]}
                 </p>
               </div>
@@ -101,7 +101,7 @@ const Index = () => {
       >
 
         <div className="text-left">
-          <div className="font-bold text-base md:text-lg">Start Now</div>
+          <div className="font-bold text-base md:text-lg">Claim Now</div>
         </div>
       </button>
 

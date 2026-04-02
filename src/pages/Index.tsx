@@ -10,11 +10,11 @@ const Index = () => {
   const faqs = [
     {
       q: "How long do the deals take?",
-      a: "Quick 10-15 minutes for 5 deals",
+      a: "Quick 5-7 minutes for 5 deals",
     },
     {
       q: "Is this really free?",
-      a: "Yes. The deals are free and come from our sponsors who promote their apps and services. You are rewarded for participating.",
+      a: "Yes. The deals are totally free",
     },
     {
       q: "What are deals?",
@@ -64,7 +64,7 @@ const Index = () => {
   
 
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
-        Complete the steps below to claim your $750 JB HiFi Credit
+        Complete the steps below to claim your $750 JB HiFi Coupon
       </h1>
 
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
@@ -78,7 +78,7 @@ const Index = () => {
                 <h3 className="font-semibold text-black mb-1">
                   {[
                     "Provide a valid email address",
-                    "Complete at least 5-6 deals",
+                    "Complete at least 3-4 deals",
                     "Claim your discount code",
                   ][i]}
                 </h3>

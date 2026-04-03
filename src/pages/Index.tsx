@@ -10,15 +10,19 @@ const Index = () => {
   const faqs = [
     {
       q: "How long do the deals take?",
-      a: "Quick 5-7 minutes for 4 deals",
-    },
-    {
-      q: "Is this really free?",
-      a: "Yes. The deals are totally free",
+      a: "Most deals take just a few minutes to complete. You can finish them at your own pace with no time limit once you've registered.",
     },
     {
       q: "What are deals?",
-      a: "Simple tasks like app downloads, surveys, or trial",
+      a: "Deals are sponsored offers from our partner brands like free trials, discount sign-ups, or sample requests. They're how the voucher is funded.",
+    },
+    {
+      q: "How many deals do I have to do?",
+      a: "We recommend completing 4 to 5 deals to qualify. The more you complete, the higher your voucher value climbs - up to $750.",
+    },
+    {
+      q: "When will I receive my voucher?",
+      a: "Once your deals are verified, your JB Hifi voucher code will be delivered to your email within 24-48 hours.",
     },
   ];
 
@@ -61,45 +65,34 @@ const Index = () => {
         />
       </div>
 
-  
-
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
-        $750 JB Hifi Easter Gift Card
+        $750 JB Hifi Voucher
       </h1>
 
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
-        <div className="space-y-6">
-          {[1, 2, 3].map((step, i) => (
-            <div key={i} className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
-                {step}
-              </div>
-              <div>
-                <h3 className="font-semibold text-black mb-1">
-                  {[
-                    "Sign up with email",
-                    "Complete 3-4 deals",
-                    "Claim your $750 gift card",
-                  ][i]}
-                </h3>
-                <p className="text-sm text-gray-600">
-                  {[
-                    "Gift card is emailed here",
-                    "Tasks like app downloads and surveys",
-                    "Enjoy your shopping!",
-                  ][i]}
-                </p>
-              </div>
-            </div>
-          ))}
+  <div className="space-y-6">
+    {[1, 2, 3, 4].map((step, i) => (
+      <div key={i} className="flex items-center gap-4">
+        <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
+          {step}
         </div>
+        <h3 className="font-semibold text-black">
+          {[
+            'Click "Claim Now"',
+            "Enter your email and basic info",
+            "Complete 4-5 sponsored deals",
+            "Enjoy your $750 Voucher!",
+          ][i]}
+        </h3>
       </div>
+    ))}
+  </div>
+</div>
 
       <button
         onClick={handleClaimClick}
         className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
       >
-
         <div className="text-left">
           <div className="font-bold text-base md:text-lg">Claim Now</div>
         </div>

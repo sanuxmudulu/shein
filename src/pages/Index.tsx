@@ -1,5 +1,5 @@
 import "../index.css";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Index = () => {
   const baseUrl = "https://linkthem.net/aff_c?offer_id=4129&aff_id=150406";
@@ -8,18 +8,15 @@ const Index = () => {
     window.location.href = `${baseUrl}&source=dm`;
   };
 
-  // ✅ CLEAN NOTIFICATIONS (no fake claims)
   const notifications = [
-    <>Olivia claimed <span className="text-green-500 font-semibold">$750</span> for completing 6 deals</>,
-  <>Charlotte received <span className="text-green-500 font-semibold">$500</span> for doing 4 deals</>,
-  <>Amelia claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
-  <>Isla received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
-  <>Ava claimed <span className="text-green-500 font-semibold">$400</span> for completing 4 deals</>,
-  <>Noah received <span className="text-green-500 font-semibold">$250</span> for doing 3 deals</>,
-  <>Grace claimed <span className="text-green-500 font-semibold">$750</span> for completing 7 deals</>,
-  <>Willow received <span className="text-green-500 font-semibold">$400</span> for doing 4 deals</>,
-  <>Harper claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
-  <>Chloe received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
+    <>Someone just started completing the steps</>,
+    <>New user is registering now</>,
+    <>Someone is completing sponsored deals</>,
+    <>Another user just unlocked their reward</>,
+    <>High activity right now</>,
+    <>Users are completing offers quickly</>,
+    <>New participant joined</>,
+    <>Someone is finishing their last deal</>,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -109,19 +106,18 @@ const Index = () => {
         $750 JB Hifi Voucher
       </h1>
 
-      {/* STEPS */}
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
         <div className="space-y-6">
           {[1, 2, 3, 4].map((step, i) => (
             <div key={i} className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0">
+              <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
                 {step}
               </div>
               <h3 className="font-semibold text-black">
                 {[
                   'Click "Claim Now"',
                   "Enter your email and basic info",
-                  "Complete 4-6 sponsored deals",
+                  "Complete 4-5 sponsored deals",
                   "Enjoy your $750 Voucher!",
                 ][i]}
               </h3>
@@ -130,36 +126,35 @@ const Index = () => {
         </div>
       </div>
 
-      {/* CTA */}
       <button
         onClick={handleClaimClick}
-        className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-6 flex items-center justify-center gap-3 shadow-lg"
+        className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-3 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
       >
-        <div className="font-bold text-base md:text-lg">Claim Now</div>
+        <div className="text-left">
+          <div className="font-bold text-base md:text-lg">Claim Now</div>
+        </div>
       </button>
 
-      <FAQSection />
+      <p className="text-sm text-gray-600 text-center mb-4">
+        Higher value deals = higher payout
+      </p>
 
-      {/* 🔥 FLOATING NOTIFICATION (ADDED) */}
-      <div className="pointer-events-none fixed bottom-4 left-1/2 z-50 w-[calc(100%-24px)] max-w-md -translate-x-1/2 md:bottom-5">
+      <div className="w-full max-w-lg mb-2">
         <div
-          className={`rounded-2xl border border-gray-200 bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm transition-all duration-300 ${
-            visible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-4 opacity-0"
+          className={`rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
           }`}
         >
-          <div className="flex items-center justify-center gap-2">
-            {/* Green dot */}
-            <span className="h-3 w-3 rounded-full bg-green-500" />
-
-            {/* Text */}
-            <p className="truncate text-base md:text-lg font-semibold text-black">
+          <div className="flex items-center justify-center gap-2 text-center">
+            <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
+            <p className="text-sm md:text-base font-semibold text-black leading-snug">
               {shuffledNotifications[currentIndex]}
             </p>
           </div>
         </div>
       </div>
+
+      <FAQSection />
     </div>
   );
 };

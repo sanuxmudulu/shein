@@ -9,14 +9,16 @@ const Index = () => {
   };
 
   const notifications = [
-    <>Someone just started completing the steps</>,
-    <>New user is registering now</>,
-    <>Someone is completing sponsored deals</>,
-    <>Another user just unlocked their reward</>,
-    <>High activity right now</>,
-    <>Users are completing offers quickly</>,
-    <>New participant joined</>,
-    <>Someone is finishing their last deal</>,
+    <>Olivia claimed <span className="text-green-500 font-semibold">$750</span> for completing 6 deals</>,
+  <>Charlotte received <span className="text-green-500 font-semibold">$500</span> for doing 4 deals</>,
+  <>Amelia claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
+  <>Isla received <span className="text-green-500 font-semibold">$750</span> for doing 6 deals</>,
+  <>Ava claimed <span className="text-green-500 font-semibold">$500</span> for completing 4 deals</>,
+  <>Noah received <span className="text-green-500 font-semibold">$400</span> for doing 4 deals</>,
+  <>Grace claimed <span className="text-green-500 font-semibold">$500</span> for completing 5 deals</>,
+  <>Willow received <span className="text-green-500 font-semibold">$750</span> for doing 6 deals</>,
+  <>Harper claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
+  <>Chloe received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

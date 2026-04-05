@@ -1,4 +1,5 @@
 import "../index.css";
+import { useEffect, useMemo, useState } from "react";
 
 const Index = () => {
   const baseUrl = "https://linkthem.net/aff_c?offer_id=4129&aff_id=150406";
@@ -6,6 +7,52 @@ const Index = () => {
   const handleClaimClick = () => {
     window.location.href = `${baseUrl}&source=dm`;
   };
+
+  // ✅ CLEAN NOTIFICATIONS (no fake claims)
+  const notifications = [
+    <>Olivia claimed <span className="text-green-500 font-semibold">$500</span> for completing 5 deals</>,
+  <>Charlotte received <span className="text-green-500 font-semibold">$250</span> for doing 3 deals</>,
+  <>Amelia claimed <span className="text-green-500 font-semibold">$750</span> for completing 8 deals</>,
+  <>Isla received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
+  <>Ava claimed <span className="text-green-500 font-semibold">$400</span> for completing 4 deals</>,
+  <>Noah received <span className="text-green-500 font-semibold">$250</span> for doing 3 deals</>,
+  <>Grace claimed <span className="text-green-500 font-semibold">$750</span> for completing 8 deals</>,
+  <>Willow received <span className="text-green-500 font-semibold">$400</span> for doing 4 deals</>,
+  <>Harper claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
+  <>Chloe received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  const shuffledNotifications = useMemo(() => {
+    const arr = [...notifications];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, []);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setVisible(true);
+    }, 1500);
+
+    const cycleTimer = setInterval(() => {
+      setVisible(false);
+
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % shuffledNotifications.length);
+        setVisible(true);
+      }, 350);
+    }, 9000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearInterval(cycleTimer);
+    };
+  }, [shuffledNotifications.length]);
 
   const faqs = [
     {
@@ -69,36 +116,57 @@ const Index = () => {
         $750 JB Hifi Voucher
       </h1>
 
+      {/* STEPS */}
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
-  <div className="space-y-6">
-    {[1, 2, 3, 4].map((step, i) => (
-      <div key={i} className="flex items-center gap-4">
-        <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
-          {step}
+        <div className="space-y-6">
+          {[1, 2, 3, 4].map((step, i) => (
+            <div key={i} className="flex items-center gap-4">
+              <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                {step}
+              </div>
+              <h3 className="font-semibold text-black">
+                {[
+                  'Click "Claim Now"',
+                  "Enter your email and basic info",
+                  "Complete 4-5 sponsored deals",
+                  "Enjoy your $750 Voucher!",
+                ][i]}
+              </h3>
+            </div>
+          ))}
         </div>
-        <h3 className="font-semibold text-black">
-          {[
-            'Click "Claim Now"',
-            "Enter your email and basic info",
-            "Complete 4-5 sponsored deals",
-            "Enjoy your $750 Voucher!",
-          ][i]}
-        </h3>
       </div>
-    ))}
-  </div>
-</div>
 
+      {/* CTA */}
       <button
         onClick={handleClaimClick}
-        className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-6 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
+        className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-6 flex items-center justify-center gap-3 shadow-lg"
       >
-        <div className="text-left">
-          <div className="font-bold text-base md:text-lg">Claim Now</div>
-        </div>
+        <div className="font-bold text-base md:text-lg">Claim Now</div>
       </button>
 
       <FAQSection />
+
+      {/* 🔥 FLOATING NOTIFICATION (ADDED) */}
+      <div className="pointer-events-none fixed bottom-4 left-1/2 z-50 w-[calc(100%-24px)] max-w-md -translate-x-1/2 md:bottom-5">
+        <div
+          className={`rounded-2xl border border-gray-200 bg-white/95 px-4 py-3 shadow-lg backdrop-blur-sm transition-all duration-300 ${
+            visible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="flex items-center justify-center gap-2">
+            {/* Green dot */}
+            <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
+
+            {/* Text */}
+            <p className="truncate text-sm font-semibold text-black sm:text-base">
+              {shuffledNotifications[currentIndex]}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

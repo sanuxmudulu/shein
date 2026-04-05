@@ -10,13 +10,13 @@ const Index = () => {
 
   // ✅ CLEAN NOTIFICATIONS (no fake claims)
   const notifications = [
-    <>Olivia claimed <span className="text-green-500 font-semibold">$500</span> for completing 5 deals</>,
-  <>Charlotte received <span className="text-green-500 font-semibold">$250</span> for doing 3 deals</>,
-  <>Amelia claimed <span className="text-green-500 font-semibold">$750</span> for completing 8 deals</>,
+    <>Olivia claimed <span className="text-green-500 font-semibold">$750</span> for completing 6 deals</>,
+  <>Charlotte received <span className="text-green-500 font-semibold">$500</span> for doing 4 deals</>,
+  <>Amelia claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
   <>Isla received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
   <>Ava claimed <span className="text-green-500 font-semibold">$400</span> for completing 4 deals</>,
   <>Noah received <span className="text-green-500 font-semibold">$250</span> for doing 3 deals</>,
-  <>Grace claimed <span className="text-green-500 font-semibold">$750</span> for completing 8 deals</>,
+  <>Grace claimed <span className="text-green-500 font-semibold">$750</span> for completing 7 deals</>,
   <>Willow received <span className="text-green-500 font-semibold">$400</span> for doing 4 deals</>,
   <>Harper claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
   <>Chloe received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
@@ -25,14 +25,7 @@ const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
 
-  const shuffledNotifications = useMemo(() => {
-    const arr = [...notifications];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  }, []);
+  const shuffledNotifications = notifications;
 
   useEffect(() => {
     const showTimer = setTimeout(() => {
@@ -128,7 +121,7 @@ const Index = () => {
                 {[
                   'Click "Claim Now"',
                   "Enter your email and basic info",
-                  "Complete 4-5 sponsored deals",
+                  "Complete 4-6 sponsored deals",
                   "Enjoy your $750 Voucher!",
                 ][i]}
               </h3>

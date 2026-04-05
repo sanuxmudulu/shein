@@ -143,7 +143,7 @@ const Index = () => {
       {/* 🔥 FLOATING NOTIFICATION (ADDED) */}
       <div className="pointer-events-none fixed bottom-4 left-1/2 z-50 w-[calc(100%-24px)] max-w-md -translate-x-1/2 md:bottom-5">
         <div
-          className={`rounded-2xl border border-gray-200 bg-white/95 px-4 py-3 shadow-lg backdrop-blur-sm transition-all duration-300 ${
+          className={`rounded-2xl border border-gray-200 bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm transition-all duration-300 ${
             visible
               ? "translate-y-0 opacity-100"
               : "translate-y-4 opacity-0"
@@ -151,10 +151,10 @@ const Index = () => {
         >
           <div className="flex items-center justify-center gap-2">
             {/* Green dot */}
-            <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
+            <span className="h-3 w-3 rounded-full bg-green-500" />
 
             {/* Text */}
-            <p className="truncate text-sm font-semibold text-black sm:text-base">
+            <p className="truncate text-base md:text-lg font-semibold text-black">
               {shuffledNotifications[currentIndex]}
             </p>
           </div>

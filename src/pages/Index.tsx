@@ -9,17 +9,47 @@ const Index = () => {
   };
 
   const notifications = [
-    <>Olivia claimed <span className="text-green-500 font-semibold">$750</span> for completing 6 deals</>,
-  <>Charlotte received <span className="text-green-500 font-semibold">$500</span> for doing 4 deals</>,
-  <>Amelia claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
-  <>Isla received <span className="text-green-500 font-semibold">$750</span> for doing 6 deals</>,
-  <>Ava claimed <span className="text-green-500 font-semibold">$500</span> for completing 4 deals</>,
-  <>Noah received <span className="text-green-500 font-semibold">$400</span> for doing 4 deals</>,
-  <>Grace claimed <span className="text-green-500 font-semibold">$500</span> for completing 5 deals</>,
-  <>Willow received <span className="text-green-500 font-semibold">$750</span> for doing 6 deals</>,
-  <>Harper claimed <span className="text-green-500 font-semibold">$250</span> for completing 3 deals</>,
-  <>Chloe received <span className="text-green-500 font-semibold">$500</span> for doing 5 deals</>,
-  ];
+  {
+    message: "STOPPP I literally got mine and im about to checkout a macbook rn 😭",
+    name: "Chloe R, Melbourne",
+  },
+  {
+    message: "I swear I thought this was fake but I just ordered a pink ipad 🥹",
+    name: "Jessica M, Sydney",
+  },
+  {
+    message: "just placed my order and im literally so excited rn ✌️😭",
+    name: "Lily J, Adelaide",
+  },
+  {
+    message: "it actually worked?? i just used it on jb hifi and im shaking 😭",
+    name: "Emily T, Brisbane",
+  },
+  {
+    message: "did the deals last night and woke up to the email omg",
+    name: "Sophie L, Perth",
+  },
+  {
+    message: "i didnt believe it at first but i just ordered my ipad in pink 💀",
+    name: "Ava K, Adelaide",
+  },
+  {
+    message: "this is crazy i just checked out and it actually applied",
+    name: "Mia D, Sydney",
+  },
+  {
+    message: "lowkey the easiest thing ive done and i just bought my macbook",
+    name: "Olivia P, Melbourne",
+  },
+  {
+    message: "WHY did no one tell me about this earlier 😭 just got mine",
+    name: "Hannah S, Brisbane",
+  },
+  {
+    message: "i thought it was one of those scams but it actually worked for me",
+    name: "Grace W, Perth",
+  },
+];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
@@ -149,9 +179,15 @@ const Index = () => {
         >
           <div className="flex items-center justify-center gap-2 text-center">
             <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
-            <p className="text-sm md:text-base font-semibold text-black leading-snug">
-              {shuffledNotifications[currentIndex]}
-            </p>
+            <p className="text-sm md:text-base text-black leading-snug text-center">
+  <span className="italic">
+    {shuffledNotifications[currentIndex].message}
+  </span>
+  <br />
+  <span className="font-semibold text-gray-700">
+    — {shuffledNotifications[currentIndex].name}
+  </span>
+</p>
           </div>
         </div>
       </div>

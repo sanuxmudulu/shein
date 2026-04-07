@@ -139,16 +139,18 @@ const Index = () => {
         Higher value deals = higher payout
       </p>
 
-      <div className="w-full max-w-lg mb-2"> 
-        <div className={rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 ${ visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0" }} > 
-        <div className="flex items-center justify-center gap-2 text-center">
-          <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
-          <p className="text-sm md:text-base font-semibold text-black leading-snug">
-            {shuffledNotifications[currentIndex]} 
-          </p> 
-        </div> 
-      </div> 
+     <div className="w-full max-w-lg mb-2">
+  <div className={`rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 ${
+    visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+  }`}>
+    <div className="flex items-center justify-center gap-2 text-center">
+      <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
+      <p className="text-sm md:text-base font-semibold text-black leading-snug">
+        {shuffledNotifications[currentIndex]}
+      </p>
     </div>
+  </div>
+</div>
 
       <FAQSection />
     </div>

@@ -179,13 +179,13 @@ const Index = () => {
   >
     <div className="flex flex-col gap-2">
       
-      {/* Message (top, left aligned, italic) */}
-      <p className="text-base md:text-lg italic text-black leading-snug text-left">
-        {shuffledNotifications[currentIndex].message}
+      {/* Message */}
+      <p className="text-sm md:text-base italic text-black leading-snug text-left">
+        "{shuffledNotifications[currentIndex].message}"
       </p>
 
-      {/* Name (bottom right) */}
-      <p className="text-sm text-gray-600 text-right font-semibold">
+      {/* Name */}
+      <p className="text-sm md:text-base text-gray-600 text-right font-semibold">
         — {shuffledNotifications[currentIndex].name}
       </p>
 

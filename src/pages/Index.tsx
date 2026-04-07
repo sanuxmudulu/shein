@@ -172,25 +172,26 @@ const Index = () => {
       </p>
 
       <div className="w-full max-w-lg mb-2">
-        <div
-          className={`rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
-          }`}
-        >
-          <div className="flex items-center justify-center gap-2 text-center">
-            <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
-            <p className="text-sm md:text-base text-black leading-snug text-center">
-  <span className="italic">
-    {shuffledNotifications[currentIndex].message}
-  </span>
-  <br />
-  <span className="font-semibold text-gray-700">
-    — {shuffledNotifications[currentIndex].name}
-  </span>
-</p>
-          </div>
-        </div>
-      </div>
+  <div
+    className={`rounded-2xl border border-gray-200 bg-white px-4 py-4 shadow-lg transition-all duration-300 ${
+      visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+    }`}
+  >
+    <div className="flex flex-col gap-2">
+      
+      {/* Message (top, left aligned, italic) */}
+      <p className="text-base md:text-lg italic text-black leading-snug text-left">
+        {shuffledNotifications[currentIndex].message}
+      </p>
+
+      {/* Name (bottom right) */}
+      <p className="text-sm text-gray-600 text-right font-semibold">
+        — {shuffledNotifications[currentIndex].name}
+      </p>
+
+    </div>
+  </div>
+</div>
 
       <FAQSection />
     </div>

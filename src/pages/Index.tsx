@@ -95,7 +95,7 @@ const Index = () => {
   return (
     <>
       <div className="w-full bg-[#FFF200] text-black text-center text-sm font-semibold py-2 px-4 fixed top-0 left-0 z-50">
-        4500+ People Already Claimed
+        3,500+ People Already Claimed
       </div>
 
       <div className="min-h-screen halloween-gradient flex flex-col items-center justify-center px-4 py-4 fade-in-up mt-8">

@@ -51,15 +51,15 @@ const Index = () => {
     },
     {
       q: "What are deals?",
-      a: "Deals are sponsored offers from our partner brands like free trials, discount sign-ups, or sample requests. They're how the coupon is funded.",
+      a: "Deals are sponsored offers from our partner brands like free trials, sign-ups, or sample requests. They're how the discount is funded.",
     },
     {
       q: "How many deals do I have to do?",
-      a: "We recommend completing 4 to 5 deals to qualify. The more you complete, the higher your coupon value climbs - up to $750.",
+      a: "We recommend completing 4 to 5 deals to qualify. The more you complete, the higher your discount value climbs - up to $750.",
     },
     {
-      q: "When will I receive my coupon?",
-      a: "Once your deals are verified, your JB Hifi coupon code will be delivered to your email within 24-48 hours.",
+      q: "When will I receive my discount?",
+      a: "Once your deals are verified, your JB Hifi discount code will be delivered to your email within 24-48 hours.",
     },
   ];
 
@@ -103,7 +103,7 @@ const Index = () => {
       </div>
 
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
-        $750 JB Hifi Coupon
+        $750 JB Hifi Discount
       </h1>
 
       <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
@@ -118,7 +118,7 @@ const Index = () => {
                   'Click "Claim Now"',
                   "Enter your email and basic info",
                   "Complete 4-5 sponsored deals",
-                  "Enjoy your $750 coupon!",
+                  "Enjoy your $750 discount!",
                 ][i]}
               </h3>
             </div>

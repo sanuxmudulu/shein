@@ -136,7 +136,7 @@ const Index = () => {
       </button>
 
       <p className="text-sm text-gray-600 text-center mb-4">
-        Higher value deals = higher payout
+        Higher value deals = higher discount
       </p>
 
      <div className="w-full max-w-lg mb-2">

@@ -93,67 +93,73 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen halloween-gradient flex flex-col items-center justify-center px-4 py-4 fade-in-up">
-      <div className="mb-4">
-        <img
-          src="/images/jb logo.jpg"
-          alt="JB Hi-Fi"
-          className="h-14 md:h-16 object-contain"
-        />
+    <>
+      <div className="w-full bg-[#FFF200] text-black text-center text-sm font-semibold py-2 px-4 fixed top-0 left-0 z-50">
+        4500+ People Already Claimed
       </div>
 
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
-        $750 JB Hifi Coupon
-      </h1>
+      <div className="min-h-screen halloween-gradient flex flex-col items-center justify-center px-4 py-4 fade-in-up mt-8">
+        <div className="mb-4">
+          <img
+            src="/images/jb logo.jpg"
+            alt="JB Hi-Fi"
+            className="h-14 md:h-16 object-contain"
+          />
+        </div>
 
-      <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
-        <div className="space-y-6">
-          {[1, 2, 3, 4].map((step, i) => (
-            <div key={i} className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
-                {step}
+        <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black max-w-lg leading-snug">
+          $750 JB Hifi Coupon
+        </h1>
+
+        <div className="w-full max-w-lg rounded-2xl border border-gray-200 p-6 mb-6 bg-white">
+          <div className="space-y-6">
+            {[1, 2, 3, 4].map((step, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-[#FFF200] text-black rounded-full flex items-center justify-center font-bold flex-shrink-0 step-number">
+                  {step}
+                </div>
+                <h3 className="font-semibold text-black">
+                  {[
+                    'Click "Claim Now"',
+                    "Enter your email and basic info",
+                    "Complete 4-5 sponsored deals",
+                    "Enjoy your $750 coupon!",
+                  ][i]}
+                </h3>
               </div>
-              <h3 className="font-semibold text-black">
-                {[
-                  'Click "Claim Now"',
-                  "Enter your email and basic info",
-                  "Complete 4-5 sponsored deals",
-                  "Enjoy your $750 coupon!",
-                ][i]}
-              </h3>
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={handleClaimClick}
+          className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-3 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
+        >
+          <div className="text-left">
+            <div className="font-bold text-base md:text-lg">Claim Now</div>
+          </div>
+        </button>
+
+        <p className="text-sm text-gray-600 text-center mb-4">
+          Higher value deals = higher payout
+        </p>
+
+        <div className="w-full max-w-lg mb-2">
+          <div className={`rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+          }`}>
+            <div className="flex items-center justify-center gap-2 text-center">
+              <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
+              <p className="text-sm md:text-base font-semibold text-black leading-snug">
+                {shuffledNotifications[currentIndex]}
+              </p>
             </div>
-          ))}
+          </div>
         </div>
+
+        <FAQSection />
       </div>
-
-      <button
-        onClick={handleClaimClick}
-        className="w-full max-w-md bg-[#FFF200] hover:bg-[#e6d800] text-black font-semibold py-5 px-6 rounded-full mb-3 shein-cta-button cta-pump-enhanced flex items-center justify-center gap-3 shadow-lg"
-      >
-        <div className="text-left">
-          <div className="font-bold text-base md:text-lg">Claim Now</div>
-        </div>
-      </button>
-
-      <p className="text-sm text-gray-600 text-center mb-4">
-        Higher value deals = higher payout
-      </p>
-
-     <div className="w-full max-w-lg mb-2">
-  <div className={`rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 ${
-    visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
-  }`}>
-    <div className="flex items-center justify-center gap-2 text-center">
-      <span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0" />
-      <p className="text-sm md:text-base font-semibold text-black leading-snug">
-        {shuffledNotifications[currentIndex]}
-      </p>
-    </div>
-  </div>
-</div>
-
-      <FAQSection />
-    </div>
+    </>
   );
 };
 
